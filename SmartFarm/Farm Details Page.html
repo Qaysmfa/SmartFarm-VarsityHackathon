@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartFarm – Farm Details</title>
+   <link rel="shortcut icon" href="logo.png">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f7f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .top-nav {
+      background: #ffffff;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+    }
+
+    .top-nav .nav-item {
+      font-size: 1rem;
+      color: #555;
+      padding: 8px 16px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .top-nav .nav-item:hover,
+    .top-nav .active {
+      background-color: #e8f5e9;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+
+    .farm-details-container {
+      padding: 30px;
+    }
+
+    .graph-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .graph-card:hover {
+      transform: scale(1.02);
+    }
+
+    .graph-title {
+      font-size: 1.2rem;
+      color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .graph-title span {
+      font-size: 1.5rem;
+    }
+
+    .graph-description {
+      margin-top: 15px;
+      font-size: 0.95rem;
+      color: #555;
+      display: none;
+      animation: fadeSlide 0.4s ease-in-out;
+    }
+
+    .graph-card.active .graph-description {
+      display: block;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🌿 SmartFarm</div>
+    <div>Hello, Farmer Raju 👨‍🌾</div>
+  </header>
+
+  <nav class="top-nav">
+    <a class="nav-item" href="Home Page.html">🏠 Home</a>
+    <a class="nav-item active" href="Farm Details Page.html">🌾 Farm Details</a>
+    <a class="nav-item" href="Learning Zone Page.html">📚 Learning Zone</a>
+  </nav>
+
+  <main class="farm-details-container">
+    <!-- Graph Card: Crop Growth -->
+    <div class="graph-card" onclick="toggleDescription(this)">
+      <div class="graph-title">
+        📈 Crop Growth Overview <span>📊</span>
+      </div>
+      <div class="graph-description">
+      <img src="crop growth.jpeg"> <br/>
+        Current crop growth stages are within expected patterns. Field A is 60% matured, Field B is at 45%. Fertilizer efficiency is optimal.
+      </div>
+    </div>
+
+    <!-- Graph Card: Soil Quality -->
+    <div class="graph-card" onclick="toggleDescription(this)">
+      <div class="graph-title">
+        🌱 Soil Quality Analysis <span>🧪</span>
+      </div>
+      <div class="graph-description">
+      <img src="soil quality.jpeg"><br/>
+        Soil pH levels average at 6.8. Organic matter is high in Field C. Suggest mulching to improve Field D's fertility.
+      </div>
+    </div>
+
+    <!-- Graph Card: Water Usage -->
+    <div class="graph-card" onclick="toggleDescription(this)">
+      <div class="graph-title">
+        💧 Water Consumption Trend <span>💦</span>
+      </div>
+      <div class="graph-description">
+      <img src="water consumption.jpeg"><br/>
+        Water usage peaked during the last irrigation cycle (80L/day). Smart Irrigation helped reduce wastage by 20%.
+      </div>
+    </div>
+
+    <!-- Graph Card: Pest Control -->
+    <div class="graph-card" onclick="toggleDescription(this)">
+      <div class="graph-title">
+        🐛 Pest Control Report <span>🚨</span>
+      </div>
+
+      <div class="graph-description">
+            <img src="pest control report.jpeg">
+        Alert in Field A due to pest presence. Neem-based pesticide applied successfully. Monitoring is ongoing.
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function toggleDescription(card) {
+      card.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

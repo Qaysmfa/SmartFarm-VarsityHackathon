@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartFarm Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f7f5;
+      overflow: hidden;
+    }
+
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f2f7f5;
+    }
+
+    .login-box {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+
+      /* Animation setup */
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeSlideIn 1s ease forwards;
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .login-box h2 {
+      margin-bottom: 20px;
+      color: #4CAF50;
+      font-size: 1.8rem;
+    }
+
+    .login-box p {
+      margin-bottom: 25px;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .login-box input[type=text],
+    .login-box input[type=password] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .login-box button {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-box button:hover {
+      background-color: #45a049;
+    }
+
+    .login-box .footer-note {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    @media (max-width: 480px) {
+      .login-box {
+        padding: 30px 20px;
+      }
+
+      .login-box h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-box">
+      <h2>🌿 SmartFarm Login</h2>
+      <p>Welcome back! Please enter your login details.</p>
+
+      <form method="post" action="Home Page.html">
+        <input type="text" placeholder="👨‍🌾 Username or Email" required>
+        <input type="password" placeholder="🔒 Password" required>
+        <button type="submit">Login</button>
+      </form>
+
+      <div class="footer-note">
+        Need help? Contact Support at 📞 1800-XXX-XXXX
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
